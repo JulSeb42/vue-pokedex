@@ -31,8 +31,14 @@ export default (plop: NodePlopAPI) => {
             {
                 type: "modify",
                 path: "../src/router/index.ts",
-                template: `{\n\t\t\tpath: "{{ path }}",\n\t\t\tname: "{{>pascalName}}",\n\t\t\tcomponent: {{>pascalName}}View,\n\t\t\tmeta: { title: SITE_DATA.PAGE_TITLE("{{>pascalName}}") },\n\t\t},\n\t\t$1`,
+                template: `{\n\t\t\tpath: PATHS.{{constantCase name}},\n\t\t\tname: "{{>pascalName}}",\n\t\t\tcomponent: {{>pascalName}}View,\n\t\t\tmeta: { title: SITE_DATA.PAGE_TITLE("{{>pascalName}}") },\n\t\t},\n\t\t$1`,
                 pattern: /(\/\* Prepend route - DO NOT REMOVE \*\/)/g,
+            },
+            {
+                type: "modify",
+                path: "../src/router/paths.ts",
+                template: `{{ constantCase name }}: "{{ path }}"\n\t$1`,
+                pattern: /(\/\* Prepend path - DO NOT REMOVE \*\/)/g,
             },
         ],
     })
