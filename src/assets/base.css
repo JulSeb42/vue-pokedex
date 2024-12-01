@@ -1,3 +1,98 @@
-/* color palette from <https://github.com/vuejs/theme> */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
+@import "./reset.css";
+
 :root {
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-gray-50: rgb(248, 248, 248);
+    --color-gray-100: rgb(228, 228, 228);
+    --color-gray-200: rgb(200, 200, 200);
+    --color-gray-300: rgb(173, 173, 173);
+    --color-gray-400: rgb(145, 145, 145);
+    --color-gray-500: rgb(118, 118, 118);
+    --color-gray-600: rgb(94, 94, 94);
+    --color-gray-700: rgb(71, 71, 71);
+    --color-gray-800: rgb(47, 47, 47);
+    --color-gray-900: rgb(24, 24, 24);
+    --color-primary-default: rgba(44, 62, 80);
+    --color-primary-hover: rgba(71, 99, 128);
+    --color-primary-active: rgba(7, 10, 13);
+    --color-success-default: rgba(83, 255, 69);
+    --color-success-hover: rgba(156, 255, 148);
+    --color-success-active: rgba(38, 255, 20);
+    --color-danger-default: rgba(216, 71, 39);
+    --color-danger-hover: rgba(228, 126, 104);
+    --color-danger-active: rgba(173, 57, 31);
+    --color-warning-default: rgba(243, 146, 55);
+    --color-warning-hover: rgba(247, 184, 125);
+    --color-warning-active: rgba(231, 119, 14);
+
+    --overlay-black-50: rgba(0, 0, 0, 0.5);
+    --overlay-black-80: rgba(0, 0, 0, 0.8);
+    --overlay-white-50: rgba(255, 255, 255, 0.5);
+    --overlay-white-80: rgba(255, 255, 255, 0.8);
+    --overlay-gradient-black: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 0.56) 100%
+    );
+    --overlay-gradient-white: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(255, 255, 255, 0.35) 100%
+    );
+
+    --font-family-body: "Lato-regular", sans-serif;
+
+    --font-size-display-h1: 5rem;
+    --font-size-display-h2: 4rem;
+    --font-size-display-h3: 3.5rem;
+    --font-size-display-h4: 3rem;
+    --font-size-display-h5: 2.5rem;
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.8rem;
+    --font-size-h4: 1.5rem;
+    --font-size-h5: 1.3rem;
+    --font-size-h6: 1.1rem;
+    --font-size-body: 1rem;
+    --font-size-small: 0.875rem;
+
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+
+    --spacer-xxl: 48px;
+    --spacer-xl: 32px;
+    --spacer-l: 24px;
+    --spacer-m: 16px;
+    --spacer-s: 12px;
+    --spacer-xs: 8px;
+    --spacer-xxs: 4px;
+
+    --radius-xxl: 24px;
+    --radius-xl: 16px;
+    --radius-l: 12px;
+    --radius-m: 8px;
+    --radius-s: 4px;
+    --radius-xs: 2px;
+    --radius-round: 99em;
+    --radius-circle: 50%;
+
+    --main-default: 600px;
+    --main-large: 800px;
+    --main-form: 400px;
+    --main-full: 100%;
+
+    --aside-default: 250px;
+    --aside-small: 200px;
+
+    --transition-short: all 200ms ease;
+    --transition-long: all 500ms ease;
+    --transition-bezier: all 0.5s cubic-bezier(0.25, 0.75, 0, 0.66);
+    --transition-progress-circle: all 1000ms ease-in-out;
+}
+
+body {
+    font-family: var(--font-family-body);
 }
